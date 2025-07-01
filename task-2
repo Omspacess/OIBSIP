@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolios.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">OM KESHWAR</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-text">
+      <h1>Hello, I'm <span>OM Keshwar</span></h1>
+      <p>Frontend Developer | Working on Java and Javascript | Eager to learn about AI-ML</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I create engaging and responsive web experiences. </p> Let’s build something great together!</p>
+  </section>
+
+  <section id="Skills">
+     <h2>Skills</h2>
+     <div>
+      <h3>Technical Skills</h3>
+     
+      <li>Development- Html, css, Javascript</li>
+      <li>Programming- C, Java, Python</li>
+      <li>Learning about API's and reactjs</li>
+     
+     <h3>Soft Skills</h3>
+     
+      <li>Team Effectiveness</li>
+      <li>Leadership and Initiative</li>  3
+      <li>Problem Solving and Time Management</li>
+    
+     </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- <div class="project-list">
+      <div class="project-card">
+        <h3>Personal Blog</h3>
+        <p>A blog built with HTML and CSS.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div> -->
+      <div class="project-card">
+        <h3>Music Recommender App</h3>
+        <p>Shows real-time music based on your mood .</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <br>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This interactive portfolio!</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="e-mail" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+//css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #22223b;
+}
+
+header {
+  background: #9a8c98;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #5f679b;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header-text span {
+  color: #f2e9e4;
+}
+
+section {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(34,34,59,0.07);
+}
+
+h2 {
+  margin-bottom: 18px;
+  color: #22223b;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #f2e9e4;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(34,34,59,0.06);
+  padding: 24px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 12px;
+  background: #9a8c98;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-card a:hover {
+  background: #4a4e69;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: #9a8c98;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #4a4e69;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #22223b;
+  color: #fff;
+  margin-top: 40px;
+}
