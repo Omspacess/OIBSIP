@@ -1,0 +1,155 @@
+//Html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Register Transparent Box</title>
+  <link rel="stylesheet" href="logi.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="formTitle">🔐 Login</h2>
+
+    <div class="switch-buttons">
+      <button onclick="showRegister()">Register</button>
+      <button onclick="showLogin()">Login</button>
+    </div>
+
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" id="actionBtn">Login</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+
+//css
+body {
+  background-image: url('https://freerangestock.com/sample/129887/two-high-rise-building-from-below-.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 320px;
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.142);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 1px solid rgb(235, 225, 225);
+}
+
+.container h2 {
+  color: rgb(14, 10, 10);
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(208, 196, 196, 0.648);
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #100101;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(40, 167, 69, 0.9);
+  color: rgb(242, 235, 235);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: rgb(1, 18, 6);
+}
+
+#message {
+  margin-top: 15px;
+  color: rgb(234, 8, 8);
+  font-weight: bold;
+}
+
+.switch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.switch-buttons button {
+  background-color: rgba(0, 123, 255, 0.7);
+}
+
+//Javascript
+const users = {};
+let mode = "login";
+
+function showRegister() {
+  mode = "register";
+  document.getElementById("formTitle").innerText = "📝 Register";
+  document.getElementById("actionBtn").innerText = "Register";
+  document.getElementById("message").innerText = "";
+}
+
+function showLogin() {
+  mode = "login";
+  document.getElementById("formTitle").innerText = "🔐 Login";
+  document.getElementById("actionBtn").innerText = "Login";
+  document.getElementById("message").innerText = "";
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value;
+  const msg = document.getElementById("message");
+
+  if (mode === "register") {
+    if (users[user]) {
+      msg.style.color = "orange";
+      msg.innerText = "⚠️ User already exists. Please login.";
+    } else {
+      users[user] = pass;
+      msg.style.color = "lightgreen";
+      msg.innerText = "✅ Registered successfully! Please login now.";
+      showLogin();
+    }
+  } else {
+    if (!users[user]) {
+      msg.style.color = "red";
+      msg.innerText = "❌ User not registered. Please register first.";
+    } else if (users[user] === pass) {
+      msg.style.color = "lightgreen";
+      msg.innerText = `✅ Welcome, ${user}! You have successfully logged in.`;
+    } else {
+      msg.style.color = "red";
+      msg.innerText = "❌ Incorrect password.";
+    }
+  }
+}
