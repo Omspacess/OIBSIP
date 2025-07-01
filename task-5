@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tribute to Someone I Admire</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+    }
+
+    header {
+      background-color: #fff3cd;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #b36b00;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .image-section {
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      margin-top: 25px;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: #d35400;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>A Tribute to My Inspiration: <span class="highlight">Dr. A.P.J. Abdul Kalam</span></h1>
+  </header>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="https://blogcdn.aakash.ac.in/wordpress_media/2024/08/A.P.J.-Abdul-Kalam.jpg" alt="Dr. A.P.J. Abdul Kalam">
+    </div>
+
+    <div class="content">
+      <p>
+        Dr. A.P.J. Abdul Kalam, fondly remembered as the "Missile Man of India", was not only a brilliant scientist but also a humble, visionary leader. His journey from a small town in Rameswaram to becoming the 11th President of India is a testament to hard work, dedication, and passion.
+      </p>
+
+      <p>
+        What I admire most in him is his unwavering commitment to education and youth empowerment. He believed in dreaming big and encouraged every student to pursue their passion with sincerity and integrity.
+      </p>
+
+      <p>
+        His speeches were full of wisdom and simplicity. One quote that always inspires me is: <span class="highlight">"Dream is not that which you see while sleeping, it is something that does not let you sleep."</span>
+      </p>
+
+      <p>
+        I adore his kindness, his smile, and his dedication to science and nation-building. His legacy continues to ignite young minds even today, reminding us that no dream is too big if we work towards it sincerely.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by someone inspired by Dr. Kalam.
+  </footer>
+
+</body>
+</html>
